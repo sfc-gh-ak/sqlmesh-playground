@@ -1,0 +1,53 @@
+# --- Gateway Connection ---
+gateways:
+  snowflake:
+    connection:
+      # For more information on configuring the connection to your execution engine, visit:
+      # https://sqlmesh.readthedocs.io/en/stable/reference/configuration/#connection
+      # https://sqlmesh.readthedocs.io/en/stable/integrations/engines/snowflake/#connection-options
+      type: snowflake
+      account: sfpscogs-akm_strawberry
+      # concurrent_tasks: 4
+      # register_comments: True
+      # pre_ping: False
+      # pretty_sql: False
+      # schema_differ_overrides: 
+      # catalog_type_overrides: 
+      user: strawberry
+      # password: <set via SNOWFLAKE_PASSWORD env var or remove if using OAuth>
+      warehouse: strawberry_wh
+      database: strawberry_db
+      role: sysadmin
+      authenticator: snowflake
+      # token:  
+      # host: 
+      # port: 
+      # application: Tobiko_SQLMesh
+      # private_key: 
+      # private_key_path: 
+      # private_key_passphrase: 
+      # session_parameters: 
+    state_connection:
+      type: duckdb
+      database: snowflake_state.db    
+
+default_gateway: snowflake
+
+# --- Model Defaults ---
+# https://sqlmesh.readthedocs.io/en/stable/reference/model_configuration/#model-defaults
+
+model_defaults:
+  dialect: snowflake
+  start: 2026-05-22 # Start date for backfill history
+  cron: '@daily'    # Run models daily at 12am UTC (can override per model)
+
+# --- Linting Rules ---
+# Enforce standards for your team
+# https://sqlmesh.readthedocs.io/en/stable/guides/linter/
+
+linter:
+  enabled: true
+  rules:
+    - ambiguousorinvalidcolumn
+    - invalidselectstarexpansion
+    - noambiguousprojections

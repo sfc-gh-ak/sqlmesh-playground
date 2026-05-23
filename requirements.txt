@@ -1,3 +1,2 @@
-sqlmesh
+sqlmesh[snowflake]
 sqlmesh[github]
-snowflake-snowpark-python
