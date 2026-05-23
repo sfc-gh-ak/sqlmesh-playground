@@ -14,7 +14,7 @@ gateways:
       # schema_differ_overrides: 
       # catalog_type_overrides: 
       user: strawberry
-      # password: <set via SNOWFLAKE_PASSWORD env var or remove if using OAuth>
+      password: {{ env_var('SNOWFLAKE_PASSWORD') }}
       warehouse: strawberry_wh
       database: strawberry_db
       role: sysadmin
