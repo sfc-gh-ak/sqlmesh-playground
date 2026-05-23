@@ -1,0 +1,16 @@
+# SQLMesh
+.cache/
+logs/
+snowflake_state.db
+*.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+*.egg-info/
+
+# Secrets
+.env
+*.env
