@@ -27,9 +27,18 @@ gateways:
       # private_key_path: 
       # private_key_passphrase: 
       # session_parameters: 
-    state_connection:
+    state_connection: # backup state management
       type: duckdb
-      database: snowflake_state.db    
+      database: snowflake_state.db  
+    # state_connection:
+    #   type: postgres
+    #   host: 5522uzgc2bae5hc75pbmgs24gm.sfpscogs-akm-strawberry.us-west-2.aws.postgres.snowflake.app
+    #   user: snowflake_admin
+    #   password: {{ env_var('PGPASSWORD') }}
+    #   database: postgres
+    #   port: 5432
+    #   # ssl: true
+          
 
 default_gateway: snowflake
 

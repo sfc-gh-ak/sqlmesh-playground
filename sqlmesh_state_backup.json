@@ -1,0 +1,402 @@
+{
+  "metadata": {
+    "timestamp": "2026-05-23 15:43:00+00:00",
+    "file_version": 1,
+    "importable": true
+  },
+  "versions": {
+    "schema_version": 101,
+    "sqlglot_version": "30.8.0",
+    "sqlmesh_version": "0.235.3"
+  },
+  "snapshots": [
+    {
+      "name": "\"STRAWBERRY_DB\".\"SQLMESH_EXAMPLE\".\"INCREMENTAL_MODEL\"",
+      "dev_version": "1531980955",
+      "change_category": 1,
+      "fingerprint": {
+        "data_hash": "1734791012",
+        "metadata_hash": "1525535792",
+        "parent_data_hash": "1877566302",
+        "parent_metadata_hash": "682414833"
+      },
+      "previous_versions": [],
+      "dev_table_suffix": "dev",
+      "table_naming_convention": "schema_and_table",
+      "forward_only": false,
+      "node": {
+        "name": "sqlmesh_example.incremental_model",
+        "project": "",
+        "start": "2020-01-01",
+        "cron": "@daily",
+        "tags": [],
+        "dialect": "snowflake",
+        "kind": {
+          "name": "INCREMENTAL_BY_TIME_RANGE",
+          "on_destructive_change": "ERROR",
+          "on_additive_change": "ALLOW",
+          "dialect": "snowflake",
+          "forward_only": false,
+          "disable_restatement": false,
+          "time_column": {
+            "column": "\"EVENT_DATE\"",
+            "format": "%Y-%m-%d"
+          },
+          "partition_by_time_column": true
+        },
+        "partitioned_by": [],
+        "clustered_by": [],
+        "default_catalog": "strawberry_db",
+        "audits": [],
+        "grains": [
+          "(id, event_date)"
+        ],
+        "references": [],
+        "allow_partials": false,
+        "signals": [],
+        "enabled": true,
+        "virtual_environment_mode": "full",
+        "grants_target_layer": "virtual",
+        "python_env": {},
+        "jinja_macros": {
+          "packages": {},
+          "root_macros": {},
+          "global_objs": {},
+          "create_builtins_module": "sqlmesh.utils.jinja",
+          "top_level_packages": []
+        },
+        "audit_definitions": {},
+        "mapping_schema": {
+          "\"STRAWBERRY_DB\"": {
+            "\"SQLMESH_EXAMPLE\"": {
+              "\"SEED_MODEL\"": {
+                "ID": "INT",
+                "ITEM_ID": "INT",
+                "EVENT_DATE": "DATE"
+              }
+            }
+          }
+        },
+        "extract_dependencies_from_query": true,
+        "pre_statements": [],
+        "post_statements": [],
+        "on_virtual_update": [],
+        "query": {
+          "sql": "SELECT\n  id,\n  item_id,\n  event_date,\nFROM\n  sqlmesh_example.seed_model\nWHERE\n  event_date BETWEEN @start_date AND @end_date"
+        },
+        "source_type": "sql"
+      },
+      "parents": [
+        {
+          "name": "\"STRAWBERRY_DB\".\"SQLMESH_EXAMPLE\".\"SEED_MODEL\"",
+          "identifier": "1292994844"
+        }
+      ],
+      "intervals": [
+        [
+          1577836800000,
+          1779494400000
+        ]
+      ],
+      "dev_intervals": [],
+      "pending_restatement_intervals": [],
+      "created_ts": 1779505378016,
+      "updated_ts": 1779506212197,
+      "ttl": "in 1 week",
+      "version": "1531980955",
+      "unpaused_ts": 1779494400000,
+      "migrated": false,
+      "unrestorable": false,
+      "last_altered_ts": 1779505653191
+    },
+    {
+      "name": "\"STRAWBERRY_DB\".\"SQLMESH_EXAMPLE\".\"SEED_MODEL\"",
+      "dev_version": "2673557486",
+      "change_category": 1,
+      "fingerprint": {
+        "data_hash": "1024095377",
+        "metadata_hash": "1537197845",
+        "parent_data_hash": "0",
+        "parent_metadata_hash": "0"
+      },
+      "previous_versions": [],
+      "dev_table_suffix": "dev",
+      "table_naming_convention": "schema_and_table",
+      "forward_only": false,
+      "node": {
+        "name": "sqlmesh_example.seed_model",
+        "project": "",
+        "start": "2026-05-22",
+        "cron": "@daily",
+        "tags": [],
+        "dialect": "snowflake",
+        "kind": {
+          "name": "SEED",
+          "path": "../seeds/seed_data.csv",
+          "batch_size": 1000
+        },
+        "partitioned_by": [],
+        "clustered_by": [],
+        "default_catalog": "strawberry_db",
+        "columns": {
+          "ID": "INTEGER",
+          "ITEM_ID": "INTEGER",
+          "EVENT_DATE": "DATE"
+        },
+        "audits": [],
+        "grains": [
+          "(id, event_date)"
+        ],
+        "references": [],
+        "allow_partials": false,
+        "signals": [],
+        "enabled": true,
+        "virtual_environment_mode": "full",
+        "grants_target_layer": "virtual",
+        "python_env": {},
+        "jinja_macros": {
+          "packages": {},
+          "root_macros": {},
+          "global_objs": {},
+          "create_builtins_module": "sqlmesh.utils.jinja",
+          "top_level_packages": []
+        },
+        "audit_definitions": {},
+        "mapping_schema": {},
+        "extract_dependencies_from_query": true,
+        "pre_statements": [],
+        "post_statements": [],
+        "on_virtual_update": [],
+        "seed": {
+          "content": "id,item_id,event_date\n1,2,2020-01-01\n2,1,2020-01-01\n3,3,2020-01-03\n4,1,2020-01-04\n5,1,2020-01-05\n6,1,2020-01-06\n7,1,2020-01-07\n"
+        },
+        "is_hydrated": true,
+        "source_type": "seed"
+      },
+      "parents": [],
+      "intervals": [
+        [
+          1779408000000,
+          1779494400000
+        ]
+      ],
+      "dev_intervals": [],
+      "pending_restatement_intervals": [],
+      "created_ts": 1779505378015,
+      "updated_ts": 1779506212197,
+      "ttl": "in 1 week",
+      "version": "2673557486",
+      "unpaused_ts": 1779494400000,
+      "migrated": false,
+      "unrestorable": false,
+      "last_altered_ts": 1779505554451
+    },
+    {
+      "name": "\"STRAWBERRY_DB\".\"SQLMESH_EXAMPLE\".\"FULL_MODEL\"",
+      "dev_version": "3600986774",
+      "change_category": 1,
+      "fingerprint": {
+        "data_hash": "3281579221",
+        "metadata_hash": "1438036074",
+        "parent_data_hash": "2558294940",
+        "parent_metadata_hash": "1661405195"
+      },
+      "previous_versions": [],
+      "dev_table_suffix": "dev",
+      "table_naming_convention": "schema_and_table",
+      "forward_only": false,
+      "node": {
+        "name": "sqlmesh_example.full_model",
+        "project": "",
+        "start": "2026-05-22",
+        "cron": "@daily",
+        "tags": [],
+        "dialect": "snowflake",
+        "kind": {
+          "name": "FULL"
+        },
+        "partitioned_by": [],
+        "clustered_by": [],
+        "default_catalog": "strawberry_db",
+        "audits": [
+          [
+            "assert_positive_order_ids",
+            {}
+          ]
+        ],
+        "grains": [
+          "item_id"
+        ],
+        "references": [],
+        "allow_partials": false,
+        "signals": [],
+        "enabled": true,
+        "virtual_environment_mode": "full",
+        "grants_target_layer": "virtual",
+        "python_env": {},
+        "jinja_macros": {
+          "packages": {},
+          "root_macros": {},
+          "global_objs": {},
+          "create_builtins_module": "sqlmesh.utils.jinja",
+          "top_level_packages": []
+        },
+        "audit_definitions": {
+          "assert_positive_order_ids": {
+            "name": "assert_positive_order_ids",
+            "dialect": "snowflake",
+            "skip": false,
+            "blocking": true,
+            "standalone": false,
+            "query": {
+              "sql": "SELECT *\nFROM @this_model\nWHERE\n  item_id < 0"
+            },
+            "defaults": {},
+            "expressions": [],
+            "jinja_macros": {
+              "packages": {},
+              "root_macros": {},
+              "global_objs": {},
+              "create_builtins_module": "sqlmesh.utils.jinja",
+              "top_level_packages": []
+            }
+          }
+        },
+        "mapping_schema": {
+          "\"STRAWBERRY_DB\"": {
+            "\"SQLMESH_EXAMPLE\"": {
+              "\"INCREMENTAL_MODEL\"": {
+                "ID": "INT",
+                "ITEM_ID": "INT",
+                "EVENT_DATE": "DATE"
+              }
+            }
+          }
+        },
+        "extract_dependencies_from_query": true,
+        "pre_statements": [],
+        "post_statements": [],
+        "on_virtual_update": [],
+        "query": {
+          "sql": "SELECT\n  item_id,\n  COUNT(DISTINCT id) AS num_orders,\nFROM\n  sqlmesh_example.incremental_model\nGROUP BY item_id"
+        },
+        "source_type": "sql"
+      },
+      "parents": [
+        {
+          "name": "\"STRAWBERRY_DB\".\"SQLMESH_EXAMPLE\".\"INCREMENTAL_MODEL\"",
+          "identifier": "2884640955"
+        }
+      ],
+      "intervals": [
+        [
+          1779408000000,
+          1779494400000
+        ]
+      ],
+      "dev_intervals": [],
+      "pending_restatement_intervals": [],
+      "created_ts": 1779505378016,
+      "updated_ts": 1779506212197,
+      "ttl": "in 1 week",
+      "version": "3600986774",
+      "unpaused_ts": 1779494400000,
+      "migrated": false,
+      "unrestorable": false,
+      "last_altered_ts": 1779505656756
+    }
+  ],
+  "environments": {
+    "prod": {
+      "environment": {
+        "name": "prod",
+        "start_at": "2020-01-01 00:00:00",
+        "end_at": "2026-05-23 00:00:00",
+        "plan_id": "3b92b330ccd14bf2a4880f5b1183c92a",
+        "previous_plan_id": "98140b8a45a24ba6859e321d23b644bb",
+        "finalized_ts": 1779506220319,
+        "suffix_target": "schema",
+        "normalize_name": true,
+        "gateway_managed": false,
+        "snapshots": [
+          {
+            "name": "\"STRAWBERRY_DB\".\"SQLMESH_EXAMPLE\".\"SEED_MODEL\"",
+            "dev_version": "2673557486",
+            "change_category": 1,
+            "fingerprint": {
+              "data_hash": "1024095377",
+              "metadata_hash": "1537197845",
+              "parent_data_hash": "0",
+              "parent_metadata_hash": "0"
+            },
+            "previous_versions": [],
+            "dev_table_suffix": "dev",
+            "table_naming_convention": "schema_and_table",
+            "forward_only": false,
+            "version": "2673557486",
+            "physical_schema": "sqlmesh__SQLMESH_EXAMPLE",
+            "parents": [],
+            "kind_name": "SEED",
+            "node_type": "model",
+            "virtual_environment_mode": "full"
+          },
+          {
+            "name": "\"STRAWBERRY_DB\".\"SQLMESH_EXAMPLE\".\"FULL_MODEL\"",
+            "dev_version": "3600986774",
+            "change_category": 1,
+            "fingerprint": {
+              "data_hash": "3281579221",
+              "metadata_hash": "1438036074",
+              "parent_data_hash": "2558294940",
+              "parent_metadata_hash": "1661405195"
+            },
+            "previous_versions": [],
+            "dev_table_suffix": "dev",
+            "table_naming_convention": "schema_and_table",
+            "forward_only": false,
+            "version": "3600986774",
+            "physical_schema": "sqlmesh__SQLMESH_EXAMPLE",
+            "parents": [
+              {
+                "name": "\"STRAWBERRY_DB\".\"SQLMESH_EXAMPLE\".\"INCREMENTAL_MODEL\"",
+                "identifier": "2884640955"
+              }
+            ],
+            "kind_name": "FULL",
+            "node_type": "model",
+            "virtual_environment_mode": "full"
+          },
+          {
+            "name": "\"STRAWBERRY_DB\".\"SQLMESH_EXAMPLE\".\"INCREMENTAL_MODEL\"",
+            "dev_version": "1531980955",
+            "change_category": 1,
+            "fingerprint": {
+              "data_hash": "1734791012",
+              "metadata_hash": "1525535792",
+              "parent_data_hash": "1877566302",
+              "parent_metadata_hash": "682414833"
+            },
+            "previous_versions": [],
+            "dev_table_suffix": "dev",
+            "table_naming_convention": "schema_and_table",
+            "forward_only": false,
+            "version": "1531980955",
+            "physical_schema": "sqlmesh__SQLMESH_EXAMPLE",
+            "parents": [
+              {
+                "name": "\"STRAWBERRY_DB\".\"SQLMESH_EXAMPLE\".\"SEED_MODEL\"",
+                "identifier": "1292994844"
+              }
+            ],
+            "kind_name": "INCREMENTAL_BY_TIME_RANGE",
+            "node_type": "model",
+            "virtual_environment_mode": "full"
+          }
+        ],
+        "previous_finalized_snapshots": [],
+        "requirements": {}
+      },
+      "statements": []
+    }
+  }
+}
