@@ -1,0 +1,37 @@
+name: SQLMesh Bot
+run-name: 🚀 SQLMesh Bot - ${{ github.head_ref || github.ref_name }}
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  # Optional: triggered when a PR is merged to deploy to production
+  push:
+    branches:
+      - main 
+
+jobs:
+  sqlmesh-check:
+    runs-on: ubuntu-latest
+    permissions:
+      # Required for the bot to comment on PRs
+      pull-requests: write
+      contents: write
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/checkout@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install SQLMesh
+        run: pip install "sqlmesh[snowflake]" # Adjust based on your engine (e.g., [snowflake])
+
+      - name: Run SQLMesh CI/CD Bot
+        # This handles testing and plan generation automatically
+        run: |
+          sqlmesh_cicd -p ${{ github.workspace }} github --token ${{ secrets.GITHUB_TOKEN }} run-all
+        env:
+          # Add any engine-specific env vars here (e.g., SNOWFLAKE_PASSWORD)
+          SQLMESH_CONNECTION_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
