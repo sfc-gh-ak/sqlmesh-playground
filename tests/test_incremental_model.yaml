@@ -1,0 +1,77 @@
+# Tests for sqlmesh_example.incremental_model
+# Verifies the WHERE event_date BETWEEN @start_date AND @end_date filter
+
+test_incremental_filters_by_date_range:
+  model: sqlmesh_example.incremental_model
+  start: '2020-01-01'
+  end: '2020-01-03'
+  inputs:
+    sqlmesh_example.seed_model:
+      column_types:
+        id: INT
+        item_id: INT
+        event_date: DATE
+      rows:
+        - id: 1
+          item_id: 2
+          event_date: '2020-01-01'
+        - id: 2
+          item_id: 1
+          event_date: '2020-01-02'
+        - id: 3
+          item_id: 3
+          event_date: '2020-01-05'  # outside range — should be excluded
+  outputs:
+    query:
+      rows:
+        - id: 1
+          item_id: 2
+          event_date: '2020-01-01'
+        - id: 2
+          item_id: 1
+          event_date: '2020-01-02'
+
+test_incremental_excludes_all_when_no_match:
+  model: sqlmesh_example.incremental_model
+  start: '2020-06-01'
+  end: '2020-06-30'
+  inputs:
+    sqlmesh_example.seed_model:
+      column_types:
+        id: INT
+        item_id: INT
+        event_date: DATE
+      rows:
+        - id: 1
+          item_id: 1
+          event_date: '2020-01-01'  # all rows outside range
+        - id: 2
+          item_id: 2
+          event_date: '2020-01-02'
+  outputs:
+    query:
+      rows: []  # expect no rows returned
+
+test_incremental_includes_boundary_dates:
+  model: sqlmesh_example.incremental_model
+  start: '2020-01-01'
+  end: '2020-01-01'
+  inputs:
+    sqlmesh_example.seed_model:
+      column_types:
+        id: INT
+        item_id: INT
+        event_date: DATE
+      rows:
+        - id: 1
+          item_id: 5
+          event_date: '2020-01-01'  # exactly on boundary — should be included
+        - id: 2
+          item_id: 6
+          event_date: '2020-01-02'  # one day after — should be excluded
+  outputs:
+    query:
+      rows:
+        - id: 1
+          item_id: 5
+          event_date: '2020-01-01'
