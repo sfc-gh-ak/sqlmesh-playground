@@ -1,0 +1,31 @@
+return_id,order_id,item_id,reason,return_date,refund_amount
+1,20,60,changed mind,2025-07-18,159.98
+2,127,350,defective,2025-08-16,44.99
+3,22,66,changed mind,2025-10-28,577.48
+4,36,106,not as described,2025-08-01,172.77
+5,25,76,wrong size,2025-11-27,604.97
+6,2,7,not as described,2025-11-18,99.98
+7,11,35,wrong size,2025-12-08,92.48
+8,64,177,damaged in shipping,2025-07-10,1399.98
+9,30,90,not as described,2025-12-06,307.97
+10,59,163,changed mind,2025-09-13,199.47
+11,115,317,changed mind,2025-10-04,924.98
+12,110,301,defective,2025-10-26,139.97
+13,200,514,changed mind,2025-08-01,374.37
+14,179,467,changed mind,2025-10-06,1231.99
+15,190,488,damaged in shipping,2025-09-15,31.99
+16,18,55,damaged in shipping,2025-09-16,134.97
+17,165,441,changed mind,2025-07-15,104.97
+18,165,443,changed mind,2025-07-26,499.99
+19,77,209,changed mind,2025-09-14,559.99
+20,17,50,damaged in shipping,2025-08-05,99.98
+21,5,15,not as described,2025-10-24,179.99
+22,12,37,not as described,2025-08-08,181.97
+23,123,341,defective,2025-10-09,122.48
+24,30,89,damaged in shipping,2025-12-09,31.99
+25,19,59,defective,2025-11-20,413.58
+26,100,276,defective,2025-11-03,369.98
+27,8,25,damaged in shipping,2025-12-02,279.98
+28,9,29,damaged in shipping,2025-09-11,75.98
+29,49,136,wrong size,2025-12-30,419.97
+30,163,436,wrong size,2025-10-02,134.99

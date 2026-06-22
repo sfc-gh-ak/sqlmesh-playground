@@ -51,6 +51,39 @@
 | `sqlmesh clean` | Clear SQLMesh cache and build artifacts |
 | `sqlmesh destroy` | Remove all project resources (destructive) |
 
+## Local Validation (no Snowflake connection required)
+
+These commands validate your project locally without connecting to Snowflake.
+Use them to catch issues before running `sqlmesh plan` against a live environment.
+
+| Step | Command | What it checks |
+|------|---------|----------------|
+| 1 | `SNOWFLAKE_PASSWORD=dummy sqlmesh lint` | Linter rules: `owner`, `tags`, built-in audit, no `SELECT *`, no ambiguous columns. Fails fast on static errors. |
+| 2 | `SNOWFLAKE_PASSWORD=dummy sqlmesh test` | Unit tests in `tests/*.yaml` — runs entirely in local DuckDB, no network call. |
+| 3 | `SNOWFLAKE_PASSWORD=dummy sqlmesh plan --skip-backfill` | Parses all SQL with SQLGlot, computes the DAG diff against local state. Fails only when it tries to connect to Snowflake to check existing tables. |
+
+> **Note:** A dummy password is used here purely to satisfy the config validation check at startup. Steps 1–2
+> never open a Snowflake connection. Step 3 will fail at the apply stage but succeeds for the diff/preview output.
+
+### What local validation does NOT cover
+- Whether SQL functions (`INITCAP`, `GREATEST`, etc.) are supported in your Snowflake edition/region
+- Whether your role has `CREATE DATABASE` / `CREATE SCHEMA` privileges for new targets
+- Whether data types cast correctly in Snowflake vs. DuckDB
+
+### Applying to Snowflake
+Once local validation passes, apply with your real password:
+
+```bash
+# Apply to prod (interactive — shows diff and prompts for confirmation)
+SNOWFLAKE_PASSWORD=<your_password> sqlmesh plan
+
+# Apply without prompting
+SNOWFLAKE_PASSWORD=<your_password> sqlmesh plan --auto-apply
+
+# Target a dev environment first (creates isolated virtual tables)
+SNOWFLAKE_PASSWORD=<your_password> sqlmesh plan dev
+```
+
 ## Global Flags
 | Flag | Description |
 |------|-------------|

@@ -1,0 +1,81 @@
+customer_id,first_name,last_name,email,city,state,country,signup_date,tier
+1,James,Anderson,james.anderson@email.com,New York,NY,US,2022-03-12,gold
+2,Sarah,Thompson,sarah.t@webmail.com,Los Angeles,CA,US,2021-07-04,silver
+3,Michael,Chen,m.chen@techmail.com,Chicago,IL,US,2023-01-18,bronze
+4,Emily,Williams,emily.w@email.com,Houston,TX,US,2020-11-30,gold
+5,David,Martinez,d.martinez@mail.com,Phoenix,AZ,US,2022-06-15,bronze
+6,Jessica,Brown,jess.brown@webmail.com,Seattle,WA,US,2021-09-22,silver
+7,Christopher,Taylor,chris.t@email.com,Boston,MA,US,2023-04-05,bronze
+8,Amanda,Davis,amanda.d@mail.com,Miami,FL,US,2020-08-17,gold
+9,Matthew,Wilson,matt.w@techmail.com,New York,NY,US,2022-12-01,silver
+10,Ashley,Moore,ashley.m@email.com,Los Angeles,CA,US,2021-05-28,bronze
+11,Joshua,Jackson,j.jackson@mail.com,Chicago,IL,US,2023-02-14,bronze
+12,Stephanie,White,steph.w@webmail.com,Houston,TX,US,2020-04-09,gold
+13,Daniel,Harris,d.harris@email.com,Seattle,WA,US,2022-08-23,silver
+14,Nicole,Martin,nicole.m@mail.com,Boston,MA,US,2021-11-16,bronze
+15,Andrew,Garcia,a.garcia@techmail.com,Miami,FL,US,2023-05-30,bronze
+16,Megan,Rodriguez,megan.r@email.com,New York,NY,US,2020-02-25,gold
+17,Ryan,Lewis,ryan.l@mail.com,Los Angeles,CA,US,2022-10-08,silver
+18,Lauren,Lee,lauren.l@webmail.com,Chicago,IL,US,2021-03-19,bronze
+19,Justin,Walker,j.walker@email.com,Phoenix,AZ,US,2023-07-11,bronze
+20,Samantha,Hall,sam.hall@mail.com,Seattle,WA,US,2020-09-04,gold
+21,Brandon,Allen,b.allen@techmail.com,Boston,MA,US,2022-01-27,silver
+22,Brittany,Young,brit.y@email.com,Miami,FL,US,2021-06-13,bronze
+23,Tyler,Hernandez,tyler.h@mail.com,New York,NY,US,2023-03-08,bronze
+24,Kayla,King,kayla.k@webmail.com,Houston,TX,US,2020-12-21,gold
+25,Aaron,Wright,a.wright@email.com,Los Angeles,CA,US,2022-05-17,silver
+26,Amber,Lopez,amber.l@mail.com,Chicago,IL,US,2021-08-30,bronze
+27,Zachary,Hill,z.hill@techmail.com,Phoenix,AZ,US,2023-06-24,bronze
+28,Heather,Scott,heather.s@email.com,Seattle,WA,US,2020-07-06,gold
+29,Kyle,Green,kyle.g@mail.com,Boston,MA,US,2022-11-14,silver
+30,Tiffany,Adams,tiffany.a@webmail.com,Miami,FL,US,2021-02-09,bronze
+31,Nathan,Baker,n.baker@email.com,New York,NY,US,2023-08-18,bronze
+32,Danielle,Gonzalez,dani.g@mail.com,Los Angeles,CA,US,2020-05-31,gold
+33,Jesse,Nelson,jesse.n@techmail.com,Chicago,IL,US,2022-03-26,silver
+34,Allison,Carter,allison.c@email.com,Houston,TX,US,2021-10-12,bronze
+35,Patrick,Mitchell,pat.m@mail.com,Phoenix,AZ,US,2023-01-05,bronze
+36,Courtney,Perez,courtney.p@webmail.com,Seattle,WA,US,2020-06-18,gold
+37,Sean,Roberts,sean.r@email.com,Boston,MA,US,2022-07-29,silver
+38,Christina,Turner,chris.t2@mail.com,Miami,FL,US,2021-04-15,bronze
+39,Adam,Phillips,adam.p@techmail.com,New York,NY,US,2023-09-03,bronze
+40,Rebecca,Campbell,becca.c@email.com,Los Angeles,CA,US,2020-01-14,gold
+41,Jordan,Parker,jordan.p@mail.com,Chicago,IL,US,2022-04-20,silver
+42,Victoria,Evans,vicki.e@webmail.com,Houston,TX,US,2021-07-27,bronze
+43,Bryan,Edwards,b.edwards@email.com,Phoenix,AZ,US,2023-02-22,bronze
+44,Kimberly,Collins,kim.c@mail.com,Seattle,WA,US,2020-10-09,gold
+45,Timothy,Stewart,tim.s@techmail.com,Boston,MA,US,2022-08-05,silver
+46,Rachael,Sanchez,rachael.s@email.com,Miami,FL,US,2021-01-31,bronze
+47,Jonathan,Morris,jon.m@mail.com,New York,NY,US,2023-04-17,bronze
+48,Vanessa,Rogers,vanessa.r@webmail.com,Los Angeles,CA,US,2020-03-26,gold
+49,Kevin,Reed,kevin.r@email.com,Chicago,IL,US,2022-09-11,silver
+50,Diana,Cook,diana.c@mail.com,Houston,TX,US,2021-12-04,bronze
+51,Scott,Morgan,s.morgan@techmail.com,Phoenix,AZ,US,2023-05-09,bronze
+52,Monica,Bell,monica.b@email.com,Seattle,WA,US,2020-08-22,gold
+53,Gregory,Murphy,greg.m@mail.com,Boston,MA,US,2022-02-16,silver
+54,Melissa,Bailey,melissa.b@webmail.com,Miami,FL,US,2021-05-03,bronze
+55,Eric,Rivera,eric.r@email.com,New York,NY,US,2023-06-28,bronze
+56,Jennifer,Cooper,jen.c@mail.com,Los Angeles,CA,US,2020-11-15,gold
+57,Mark,Richardson,mark.r@techmail.com,Chicago,IL,US,2022-06-23,silver
+58,Angela,Cox,angela.c@email.com,Houston,TX,US,2021-09-08,bronze
+59,Brian,Howard,brian.h@mail.com,Phoenix,AZ,US,2023-07-14,bronze
+60,Natalie,Ward,natalie.w@webmail.com,Seattle,WA,US,2020-04-30,gold
+61,Kevin,Torres,kevin.t@email.com,Boston,MA,US,2022-10-17,silver
+62,Sandra,Peterson,sandra.p@mail.com,Miami,FL,US,2021-03-24,bronze
+63,Philip,Gray,philip.g@techmail.com,New York,NY,US,2023-08-06,bronze
+64,Cynthia,Ramirez,cynthia.r@email.com,Los Angeles,CA,US,2020-07-19,gold
+65,Craig,James,craig.j@mail.com,Chicago,IL,US,2022-12-28,silver
+66,Brittney,Watson,brit2.w@webmail.com,Houston,TX,US,2021-06-11,bronze
+67,Shawn,Brooks,shawn.b@email.com,Phoenix,AZ,US,2023-03-19,bronze
+68,Patricia,Kelly,pat.k@mail.com,Seattle,WA,US,2020-09-26,gold
+69,Gerald,Sanders,gerald.s@techmail.com,Boston,MA,US,2022-01-13,silver
+70,Cheryl,Price,cheryl.p@email.com,Miami,FL,US,2021-11-22,bronze
+71,Dennis,Bennett,dennis.b@mail.com,New York,NY,US,2023-04-30,bronze
+72,Dorothy,Wood,dorothy.w@webmail.com,Los Angeles,CA,US,2020-02-07,gold
+73,Russell,Barnes,russ.b@email.com,Chicago,IL,US,2022-07-04,silver
+74,Carol,Ross,carol.r@mail.com,Houston,TX,US,2021-08-18,bronze
+75,Larry,Henderson,larry.h@techmail.com,Phoenix,AZ,US,2023-05-23,bronze
+76,Sharon,Coleman,sharon.c@email.com,Seattle,WA,US,2020-06-04,gold
+77,Joe,Jenkins,joe.j@mail.com,Boston,MA,US,2022-11-29,silver
+78,Anna,Perry,anna.p@webmail.com,Miami,FL,US,2021-04-07,bronze
+79,Frank,Powell,frank.p@email.com,New York,NY,US,2023-09-12,bronze
+80,Carolyn,Long,carolyn.l@mail.com,Los Angeles,CA,US,2020-01-28,gold

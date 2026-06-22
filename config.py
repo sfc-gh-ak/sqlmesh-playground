@@ -53,6 +53,7 @@ config = Config(
         "raw_db": os.environ.get("SNOWFLAKE_RAW_DB", "STRAWBERRY_DB"),  # source/raw data database
         "reporting_schema": "ANALYTICS",                                  # schema for analyst-facing models
         "environment": os.environ.get("SQLMESH_ENV", "prod"),            # override with SQLMESH_ENV=dev
+        "star_db": "STAR_SIMULATOR_DB",                                    # star schema simulator database
     },
 
     # --- Linting Rules ---

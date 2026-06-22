@@ -1,0 +1,41 @@
+product_id,sku,name,category_id,brand,cost,list_price,is_active
+1,ELEC-LAP-001,ProBook 15 Laptop,2,TechPro,650.00,999.99,true
+2,ELEC-LAP-002,SlimBook Air 13,2,AeroTech,480.00,749.99,true
+3,ELEC-LAP-003,WorkStation Pro,2,TechPro,900.00,1399.99,true
+4,ELEC-PHN-001,Galaxy X12,3,NovaMobile,420.00,699.99,true
+5,ELEC-PHN-002,FlexPhone 11,3,NovaMobile,310.00,549.99,true
+6,ELEC-PHN-003,ProPhone SE,3,TechPro,280.00,499.99,true
+7,ELEC-ACC-001,Wireless Mouse,4,TechPro,18.00,39.99,true
+8,ELEC-ACC-002,USB-C Hub 7-Port,4,ConnectPro,22.00,49.99,true
+9,ELEC-ACC-003,Mechanical Keyboard,4,TypeMaster,55.00,109.99,true
+10,ELEC-ACC-004,Noise Cancelling Headphones,4,SoundWave,95.00,179.99,true
+11,CLTH-MEN-001,Classic Oxford Shirt,6,UrbanWear,18.00,49.99,true
+12,CLTH-MEN-002,Slim Chino Pants,6,UrbanWear,22.00,59.99,true
+13,CLTH-MEN-003,Casual Hoodie,6,StreetStyle,25.00,64.99,true
+14,CLTH-WMN-001,Floral Wrap Dress,7,Bloom,30.00,79.99,true
+15,CLTH-WMN-002,Skinny Jeans,7,DenimCo,28.00,69.99,true
+16,CLTH-WMN-003,Knit Cardigan,7,Bloom,32.00,74.99,true
+17,CLTH-FTW-001,Running Shoes M,8,StridePro,60.00,129.99,true
+18,CLTH-FTW-002,Canvas Sneakers,8,UrbanWear,28.00,64.99,true
+19,CLTH-FTW-003,Leather Boots W,8,SoleCraft,75.00,159.99,true
+20,HOME-FRN-001,Ergonomic Office Chair,10,ComfortSeat,180.00,349.99,true
+21,HOME-FRN-002,Standing Desk 60in,10,DeskMate,220.00,449.99,true
+22,HOME-FRN-003,Bookshelf 5-Tier,10,WoodCraft,90.00,189.99,true
+23,HOME-KIT-001,Chef Knife Set 8pc,11,CutPro,40.00,89.99,true
+24,HOME-KIT-002,Non-Stick Cookware Set,11,HeatMaster,65.00,149.99,true
+25,HOME-KIT-003,Electric Coffee Grinder,11,BrewCo,30.00,69.99,true
+26,SPRT-GEN-001,Yoga Mat Premium,12,FlexFit,20.00,44.99,true
+27,SPRT-GEN-002,Resistance Band Set,12,FlexFit,12.00,29.99,true
+28,SPRT-GEN-003,Foam Roller XL,12,RecoverPro,15.00,34.99,true
+29,SPRT-GEN-004,Adjustable Dumbbells 20lb,12,IronGrip,80.00,169.99,true
+30,ELEC-ACC-005,Screen Protector Pack,4,ClearShield,5.00,14.99,true
+31,CLTH-MEN-004,Wool Blend Coat,6,UrbanWear,85.00,189.99,true
+32,CLTH-WMN-004,Puffer Jacket,7,NorthStyle,90.00,199.99,true
+33,HOME-KIT-004,Air Fryer 5.8QT,11,CrispAir,70.00,149.99,true
+34,ELEC-LAP-004,Budget Chromebook,2,EduTech,200.00,329.99,false
+35,SPRT-GEN-005,Jump Rope Speed,12,FlexFit,8.00,19.99,true
+36,HOME-FRN-004,Wall Mounted TV Stand,10,WoodCraft,110.00,229.99,true
+37,ELEC-PHN-004,Budget Android Phone,3,ValueTech,120.00,219.99,true
+38,CLTH-FTW-004,Sandals Summer,8,SoleCraft,22.00,49.99,true
+39,HOME-KIT-005,Bamboo Cutting Board Set,11,WoodCraft,18.00,39.99,true
+40,ELEC-ACC-006,Portable Charger 20000mAh,4,PowerBank,25.00,54.99,true

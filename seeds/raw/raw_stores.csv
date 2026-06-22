@@ -1,0 +1,11 @@
+store_id,name,city,state,country,store_type,opened_date
+1,Downtown Flagship,New York,NY,US,physical,2018-03-15
+2,Westfield Mall,Los Angeles,CA,US,physical,2019-06-01
+3,Michigan Ave,Chicago,IL,US,physical,2017-11-20
+4,Online Store,,,US,online,2016-01-01
+5,Houston Galleria,Houston,TX,US,physical,2020-02-10
+6,Phoenix Outlet,Phoenix,AZ,US,outlet,2021-05-05
+7,Seattle Centre,Seattle,WA,US,physical,2019-09-18
+8,Mobile App,,,US,mobile,2020-07-15
+9,Boston Newbury,Boston,MA,US,physical,2018-04-22
+10,Miami Beach,Miami,FL,US,physical,2022-01-30

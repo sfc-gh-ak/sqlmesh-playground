@@ -1,0 +1,9 @@
+promo_id,name,discount_type,discount_value,start_date,end_date
+1,Summer Sale,percentage,15.00,2025-07-01,2025-07-31
+2,Back to School,percentage,10.00,2025-08-01,2025-08-31
+3,Labor Day Weekend,percentage,20.00,2025-08-30,2025-09-01
+4,Fall Refresh,fixed,10.00,2025-09-15,2025-10-15
+5,Halloween Special,percentage,12.00,2025-10-25,2025-10-31
+6,Veterans Day,percentage,25.00,2025-11-10,2025-11-11
+7,Black Friday,percentage,30.00,2025-11-28,2025-11-28
+8,Cyber Monday,percentage,25.00,2025-12-01,2025-12-01

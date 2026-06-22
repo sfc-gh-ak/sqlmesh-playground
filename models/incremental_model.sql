@@ -5,7 +5,11 @@ MODEL (
   ),
   start '2020-01-01',
   cron '@daily',
-  grain (id, event_date)
+  owner 'data_team',
+  tags ['standard'],
+  description 'Example incremental model. Filters seed data by date range for daily processing.',
+  grain (id, event_date),
+  audits (not_null(columns := [id, item_id, event_date]))
 );
 
 SELECT
@@ -16,4 +20,3 @@ FROM
   sqlmesh_example.seed_model
 WHERE
   event_date BETWEEN @start_date AND @end_date
-  
